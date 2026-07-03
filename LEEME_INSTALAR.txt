@@ -1,0 +1,19 @@
+BCP - app web instalable y modo sin internet
+
+Android Chrome:
+1. Sube esta carpeta descomprimida a un hosting HTTPS.
+2. Abre index.html en Chrome.
+3. Toca menú ⋮ > Agregar a pantalla principal / Instalar app.
+4. Abre una vez con internet para que se guarde en caché; luego puede abrir sin internet.
+
+iPhone Safari:
+1. Abre index.html desde un hosting HTTPS en Safari.
+2. Toca Compartir > Agregar a pantalla de inicio.
+3. Abre una vez con internet desde el icono instalado para guardar la app.
+4. Luego puede abrir sin internet.
+
+Corrección incluida:
+- Se mejoró el modo offline con Service Worker.
+- Se corrigió la pantalla blanca en iPhone al abrir Yapear a celular y Transferir dinero usando una carga compatible con iOS.
+
+Nombre de la app: BCP
