@@ -1,14 +1,17 @@
-const CACHE_NAME = 'bcp-app-offline-v3';
+const CACHE_NAME = 'bcp-app-offline-v5-instalar-pwa';
 const ASSETS = [
-  './', './index.html', './manifest.json', './sw.js',
+  './', './index.html', './manifest.json', './manifest.webmanifest', './sw.js',
   './icon-120.png', './icon-152.png', './icon-167.png', './icon-180.png',
-  './icon-192.png', './icon-512.png', './icon-maskable-512.png', './logo_original.png'
+  './icon-192.png', './icon-512.png', './icon-maskable-512.png', './logo_original.png',
+  './assets/images/asset_016.png'
 ];
 
 self.addEventListener('install', event => {
   self.skipWaiting();
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS.map(url => new Request(url, {cache: 'reload'}))).catch(() => cache.addAll(ASSETS)))
+    caches.open(CACHE_NAME).then(cache => Promise.all(
+      ASSETS.map(url => cache.add(new Request(url, {cache: 'reload'})).catch(() => null))
+    ))
   );
 });
 

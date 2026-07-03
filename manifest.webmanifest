@@ -13,7 +13,7 @@
     "fullscreen"
   ],
   "orientation": "portrait",
-  "background_color": "#ffffff",
+  "background_color": "#0038B8",
   "theme_color": "#0038B8",
   "icons": [
     {
@@ -40,5 +40,6 @@
       "type": "image/png",
       "purpose": "any maskable"
     }
-  ]
+  ],
+  "prefer_related_applications": false
 }
